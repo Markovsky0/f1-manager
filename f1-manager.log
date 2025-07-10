@@ -41,3 +41,548 @@ This generated password is for development use only. Your security configuration
 2025-07-10T09:01:00.456+02:00  INFO 26160 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
 2025-07-10T09:01:00.583+02:00  INFO 26160 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
 2025-07-10T09:01:00.590+02:00  INFO 26160 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 4.241 seconds (process running for 5.165)
+2025-07-10T09:41:23.306+02:00  INFO 26160 --- [f1-manager] [http-nio-9080-exec-4] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T09:41:23.309+02:00  INFO 26160 --- [f1-manager] [http-nio-9080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T09:41:23.319+02:00  INFO 26160 --- [f1-manager] [http-nio-9080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-07-10T09:48:43.557+02:00  INFO 26160 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T09:48:43.564+02:00  INFO 26160 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T09:48:43.593+02:00  INFO 26160 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:48:43.597+02:00  INFO 26160 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown initiated...
+2025-07-10T09:48:43.599+02:00  INFO 26160 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown completed.
+2025-07-10T09:48:48.340+02:00  INFO 27876 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 27876 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T09:48:48.342+02:00 DEBUG 27876 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T09:48:48.342+02:00  INFO 27876 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T09:48:48.886+02:00  INFO 27876 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:48:48.887+02:00  INFO 27876 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T09:48:48.903+02:00  INFO 27876 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-07-10T09:48:48.914+02:00  INFO 27876 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:48:48.915+02:00  INFO 27876 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T09:48:48.922+02:00  INFO 27876 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T09:48:49.447+02:00  INFO 27876 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T09:48:49.458+02:00  INFO 27876 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T09:48:49.458+02:00  INFO 27876 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T09:48:49.502+02:00  INFO 27876 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T09:48:49.502+02:00  INFO 27876 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
+2025-07-10T09:48:49.633+02:00  WARN 27876 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : f1manager - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T09:48:49.634+02:00  INFO 27876 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : f1manager - Starting...
+2025-07-10T09:48:49.818+02:00  INFO 27876 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : f1manager - Added connection conn0: url=jdbc:h2:mem:f1manager user=SA
+2025-07-10T09:48:49.820+02:00  INFO 27876 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : f1manager - Start completed.
+2025-07-10T09:48:49.851+02:00  INFO 27876 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T09:48:49.890+02:00  INFO 27876 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T09:48:49.918+02:00  INFO 27876 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T09:48:50.142+02:00  INFO 27876 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T09:48:50.203+02:00  INFO 27876 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (f1manager)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T09:48:50.449+02:00  INFO 27876 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T09:48:50.452+02:00  INFO 27876 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:48:50.494+02:00  WARN 27876 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T09:48:50.594+02:00  WARN 27876 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cf1e1410-f7da-4b21-bfa1-0a669d7f81e2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T09:48:50.600+02:00  INFO 27876 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T09:48:51.431+02:00  INFO 27876 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:f1manager'
+2025-07-10T09:48:51.525+02:00  INFO 27876 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T09:48:51.531+02:00  INFO 27876 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.643 seconds (process running for 4.14)
+2025-07-10T09:49:02.076+02:00  INFO 27876 --- [f1-manager] [http-nio-9080-exec-6] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T09:49:02.077+02:00  INFO 27876 --- [f1-manager] [http-nio-9080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T09:49:02.079+02:00  INFO 27876 --- [f1-manager] [http-nio-9080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-10T09:50:41.563+02:00  INFO 27876 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T09:50:41.569+02:00  INFO 27876 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T09:50:41.585+02:00  INFO 27876 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:50:41.587+02:00  INFO 27876 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown initiated...
+2025-07-10T09:50:41.589+02:00  INFO 27876 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown completed.
+2025-07-10T09:50:44.843+02:00  INFO 16444 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 16444 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T09:50:44.845+02:00 DEBUG 16444 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T09:50:44.845+02:00  INFO 16444 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T09:50:45.464+02:00  INFO 16444 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:50:45.465+02:00  INFO 16444 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T09:50:45.481+02:00  INFO 16444 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-07-10T09:50:45.494+02:00  INFO 16444 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:50:45.495+02:00  INFO 16444 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T09:50:45.503+02:00  INFO 16444 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T09:50:46.169+02:00  INFO 16444 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T09:50:46.192+02:00  INFO 16444 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T09:50:46.192+02:00  INFO 16444 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T09:50:46.252+02:00  INFO 16444 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T09:50:46.252+02:00  INFO 16444 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1377 ms
+2025-07-10T09:50:46.381+02:00  WARN 16444 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : f1manager - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T09:50:46.383+02:00  INFO 16444 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : f1manager - Starting...
+2025-07-10T09:50:46.564+02:00  INFO 16444 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : f1manager - Added connection conn0: url=jdbc:h2:mem:f1manager user=SA
+2025-07-10T09:50:46.566+02:00  INFO 16444 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : f1manager - Start completed.
+2025-07-10T09:50:46.597+02:00  INFO 16444 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T09:50:46.643+02:00  INFO 16444 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T09:50:46.668+02:00  INFO 16444 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T09:50:46.895+02:00  INFO 16444 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T09:50:46.953+02:00  INFO 16444 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (f1manager)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T09:50:47.316+02:00  INFO 16444 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T09:50:47.324+02:00  INFO 16444 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:50:47.384+02:00  WARN 16444 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T09:50:47.498+02:00  WARN 16444 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2900db16-4aa6-43dd-8377-9fc18a9ee3bd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T09:50:47.504+02:00  INFO 16444 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T09:50:48.387+02:00  INFO 16444 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:f1manager'
+2025-07-10T09:50:48.493+02:00  INFO 16444 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T09:50:48.499+02:00  INFO 16444 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 4.097 seconds (process running for 4.667)
+2025-07-10T09:57:39.299+02:00  INFO 16444 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T09:57:39.305+02:00  INFO 16444 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T09:57:39.321+02:00  INFO 16444 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:57:39.323+02:00  INFO 16444 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown initiated...
+2025-07-10T09:57:39.324+02:00  INFO 16444 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown completed.
+2025-07-10T09:57:41.589+02:00  INFO 21748 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 21748 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T09:57:41.592+02:00 DEBUG 21748 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T09:57:41.593+02:00  INFO 21748 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T09:57:42.328+02:00  INFO 21748 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:57:42.330+02:00  INFO 21748 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T09:57:42.347+02:00  INFO 21748 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-07-10T09:57:42.363+02:00  INFO 21748 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:57:42.365+02:00  INFO 21748 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T09:57:42.377+02:00  INFO 21748 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T09:57:42.973+02:00  INFO 21748 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T09:57:42.985+02:00  INFO 21748 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T09:57:42.985+02:00  INFO 21748 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T09:57:43.028+02:00  INFO 21748 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T09:57:43.028+02:00  INFO 21748 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
+2025-07-10T09:57:43.168+02:00  WARN 21748 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : f1manager - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T09:57:43.169+02:00  INFO 21748 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : f1manager - Starting...
+2025-07-10T09:57:43.360+02:00  INFO 21748 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : f1manager - Added connection conn0: url=jdbc:h2:mem:f1manager user=SA
+2025-07-10T09:57:43.362+02:00  INFO 21748 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : f1manager - Start completed.
+2025-07-10T09:57:43.409+02:00  INFO 21748 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T09:57:43.449+02:00  INFO 21748 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T09:57:43.475+02:00  INFO 21748 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T09:57:43.704+02:00  INFO 21748 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T09:57:43.763+02:00  INFO 21748 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (f1manager)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T09:57:44.020+02:00  INFO 21748 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T09:57:44.025+02:00  INFO 21748 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:57:44.073+02:00  WARN 21748 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T09:57:44.181+02:00  WARN 21748 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5bcf74b1-94fe-4f5c-8573-ebbd1d2ec55b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T09:57:44.187+02:00  INFO 21748 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T09:57:45.062+02:00  INFO 21748 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:f1manager'
+2025-07-10T09:57:45.164+02:00  INFO 21748 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T09:57:45.172+02:00  INFO 21748 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 4.06 seconds (process running for 4.537)
+2025-07-10T09:57:53.377+02:00  INFO 21748 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T09:57:53.383+02:00  INFO 21748 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T09:57:53.400+02:00  INFO 21748 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:57:53.402+02:00  INFO 21748 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown initiated...
+2025-07-10T09:57:53.403+02:00  INFO 21748 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : f1manager - Shutdown completed.
+2025-07-10T09:57:55.967+02:00  INFO 21176 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 21176 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T09:57:55.969+02:00 DEBUG 21176 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T09:57:55.969+02:00  INFO 21176 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T09:57:56.570+02:00  INFO 21176 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:57:56.572+02:00  INFO 21176 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T09:57:56.588+02:00  INFO 21176 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-07-10T09:57:56.602+02:00  INFO 21176 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:57:56.602+02:00  INFO 21176 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T09:57:56.611+02:00  INFO 21176 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T09:57:57.286+02:00  INFO 21176 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T09:57:57.297+02:00  INFO 21176 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T09:57:57.297+02:00  INFO 21176 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T09:57:57.344+02:00  INFO 21176 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T09:57:57.344+02:00  INFO 21176 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1342 ms
+2025-07-10T09:57:57.471+02:00  WARN 21176 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T09:57:57.472+02:00  INFO 21176 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T09:57:57.706+02:00  INFO 21176 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:f1manager user=SA
+2025-07-10T09:57:57.708+02:00  INFO 21176 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T09:57:57.762+02:00  INFO 21176 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T09:57:57.803+02:00  INFO 21176 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T09:57:57.829+02:00  INFO 21176 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T09:57:58.053+02:00  INFO 21176 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T09:57:58.118+02:00  INFO 21176 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T09:57:58.383+02:00  INFO 21176 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T09:57:58.387+02:00  INFO 21176 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:57:58.430+02:00  WARN 21176 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T09:57:58.529+02:00  WARN 21176 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ed729696-5c05-450c-b00e-0c03ed63e772
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T09:57:58.534+02:00  INFO 21176 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T09:57:59.370+02:00  INFO 21176 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:f1manager'
+2025-07-10T09:57:59.464+02:00  INFO 21176 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T09:57:59.471+02:00  INFO 21176 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.947 seconds (process running for 4.444)
+2025-07-10T09:58:38.945+02:00  INFO 21176 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T09:58:38.951+02:00  INFO 21176 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T09:58:38.966+02:00  INFO 21176 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:58:38.967+02:00  INFO 21176 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T09:58:38.969+02:00  INFO 21176 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T09:58:41.227+02:00  INFO 28860 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 28860 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T09:58:41.229+02:00 DEBUG 28860 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T09:58:41.229+02:00  INFO 28860 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T09:58:41.858+02:00  INFO 28860 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:58:41.859+02:00  INFO 28860 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T09:58:41.883+02:00  INFO 28860 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2025-07-10T09:58:41.897+02:00  INFO 28860 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T09:58:41.899+02:00  INFO 28860 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T09:58:41.908+02:00  INFO 28860 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T09:58:42.705+02:00  INFO 28860 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T09:58:42.717+02:00  INFO 28860 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T09:58:42.718+02:00  INFO 28860 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T09:58:42.770+02:00  INFO 28860 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T09:58:42.772+02:00  INFO 28860 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1511 ms
+2025-07-10T09:58:42.903+02:00  WARN 28860 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T09:58:42.904+02:00  INFO 28860 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T09:58:43.103+02:00  INFO 28860 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T09:58:43.104+02:00  INFO 28860 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T09:58:43.134+02:00  INFO 28860 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T09:58:43.174+02:00  INFO 28860 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T09:58:43.198+02:00  INFO 28860 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T09:58:43.426+02:00  INFO 28860 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T09:58:43.495+02:00  INFO 28860 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T09:58:43.773+02:00  INFO 28860 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T09:58:43.777+02:00  INFO 28860 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T09:58:43.819+02:00  WARN 28860 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T09:58:43.941+02:00  WARN 28860 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 49aeb366-9a89-4d9d-bc16-1f94a6828627
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T09:58:43.949+02:00  INFO 28860 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T09:58:44.897+02:00  INFO 28860 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T09:58:45.031+02:00  INFO 28860 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T09:58:45.039+02:00  INFO 28860 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 4.233 seconds (process running for 4.76)
+2025-07-10T10:01:07.827+02:00  INFO 28860 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:01:07.834+02:00  INFO 28860 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:01:07.850+02:00  INFO 28860 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:01:07.851+02:00  INFO 28860 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:01:07.853+02:00  INFO 28860 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T10:01:10.887+02:00  INFO 28720 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 28720 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T10:01:10.889+02:00 DEBUG 28720 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T10:01:10.890+02:00  INFO 28720 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T10:01:11.443+02:00  INFO 28720 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:01:11.445+02:00  INFO 28720 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T10:01:11.460+02:00  INFO 28720 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-07-10T10:01:11.472+02:00  INFO 28720 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:01:11.473+02:00  INFO 28720 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T10:01:11.481+02:00  INFO 28720 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T10:01:12.101+02:00  INFO 28720 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T10:01:12.120+02:00  INFO 28720 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T10:01:12.121+02:00  INFO 28720 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T10:01:12.199+02:00  INFO 28720 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T10:01:12.200+02:00  INFO 28720 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1276 ms
+2025-07-10T10:01:12.403+02:00  WARN 28720 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T10:01:12.404+02:00  INFO 28720 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T10:01:12.593+02:00  INFO 28720 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T10:01:12.595+02:00  INFO 28720 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T10:01:12.634+02:00  INFO 28720 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T10:01:12.693+02:00  INFO 28720 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T10:01:12.724+02:00  INFO 28720 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T10:01:13.042+02:00  INFO 28720 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T10:01:13.110+02:00  INFO 28720 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T10:01:13.416+02:00  INFO 28720 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T10:01:13.421+02:00  INFO 28720 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:01:13.475+02:00  WARN 28720 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T10:01:13.606+02:00  WARN 28720 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 41c7ca62-55fb-4768-9409-26a9f7d6bbae
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T10:01:13.611+02:00  INFO 28720 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T10:01:14.560+02:00  INFO 28720 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T10:01:14.673+02:00  INFO 28720 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T10:01:14.679+02:00  INFO 28720 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 4.22 seconds (process running for 4.687)
+2025-07-10T10:01:15.348+02:00  INFO 28720 --- [f1-manager] [http-nio-9080-exec-1] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T10:01:15.348+02:00  INFO 28720 --- [f1-manager] [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T10:01:15.350+02:00  INFO 28720 --- [f1-manager] [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-10T10:01:27.518+02:00  INFO 28720 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:01:27.525+02:00  INFO 28720 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:01:27.540+02:00  INFO 28720 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:01:27.542+02:00  INFO 28720 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:01:27.544+02:00  INFO 28720 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T10:01:30.157+02:00  INFO 5216 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 5216 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T10:01:30.158+02:00 DEBUG 5216 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T10:01:30.159+02:00  INFO 5216 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T10:01:30.813+02:00  INFO 5216 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:01:30.814+02:00  INFO 5216 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T10:01:30.829+02:00  INFO 5216 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-07-10T10:01:30.842+02:00  INFO 5216 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:01:30.843+02:00  INFO 5216 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T10:01:30.854+02:00  INFO 5216 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T10:01:31.413+02:00  INFO 5216 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T10:01:31.435+02:00  INFO 5216 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T10:01:31.435+02:00  INFO 5216 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T10:01:31.499+02:00  INFO 5216 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T10:01:31.503+02:00  INFO 5216 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1309 ms
+2025-07-10T10:01:31.629+02:00  WARN 5216 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T10:01:31.630+02:00  INFO 5216 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T10:01:31.799+02:00  INFO 5216 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T10:01:31.801+02:00  INFO 5216 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T10:01:31.830+02:00  INFO 5216 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T10:01:31.874+02:00  INFO 5216 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T10:01:31.904+02:00  INFO 5216 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T10:01:32.130+02:00  INFO 5216 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T10:01:32.194+02:00  INFO 5216 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T10:01:32.451+02:00  INFO 5216 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T10:01:32.456+02:00  INFO 5216 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:01:32.517+02:00  WARN 5216 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T10:01:32.625+02:00  WARN 5216 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ab187701-2de5-4e4c-a9c4-a7509e22b592
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T10:01:32.630+02:00  INFO 5216 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T10:01:33.443+02:00  INFO 5216 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T10:01:33.544+02:00  INFO 5216 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T10:01:33.551+02:00  INFO 5216 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.86 seconds (process running for 4.302)
+2025-07-10T10:01:45.279+02:00  INFO 5216 --- [f1-manager] [http-nio-9080-exec-1] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-10T10:01:45.279+02:00  INFO 5216 --- [f1-manager] [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-10T10:01:45.280+02:00  INFO 5216 --- [f1-manager] [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-10T10:02:21.556+02:00  INFO 5216 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:02:21.562+02:00  INFO 5216 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:02:21.579+02:00  INFO 5216 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:02:21.581+02:00  INFO 5216 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:02:21.582+02:00  INFO 5216 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T10:02:44.208+02:00  INFO 29276 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 29276 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T10:02:44.209+02:00 DEBUG 29276 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T10:02:44.210+02:00  INFO 29276 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T10:02:44.757+02:00  INFO 29276 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:02:44.758+02:00  INFO 29276 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T10:02:44.773+02:00  INFO 29276 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-07-10T10:02:44.784+02:00  INFO 29276 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:02:44.785+02:00  INFO 29276 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T10:02:44.793+02:00  INFO 29276 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T10:02:45.337+02:00  INFO 29276 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T10:02:45.354+02:00  INFO 29276 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T10:02:45.354+02:00  INFO 29276 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T10:02:45.406+02:00  INFO 29276 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T10:02:45.406+02:00  INFO 29276 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1158 ms
+2025-07-10T10:02:45.527+02:00  WARN 29276 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T10:02:45.528+02:00  INFO 29276 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T10:02:45.693+02:00  INFO 29276 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T10:02:45.694+02:00  INFO 29276 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T10:02:45.724+02:00  INFO 29276 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T10:02:45.760+02:00  INFO 29276 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T10:02:45.783+02:00  INFO 29276 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T10:02:46.008+02:00  INFO 29276 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T10:02:46.063+02:00  INFO 29276 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T10:02:46.315+02:00  INFO 29276 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T10:02:46.319+02:00  INFO 29276 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:02:46.360+02:00  WARN 29276 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T10:02:46.462+02:00  WARN 29276 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 344a166a-c3ee-45a6-add4-79c604ca333b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T10:02:46.470+02:00  INFO 29276 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T10:02:47.259+02:00  INFO 29276 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T10:02:47.352+02:00  INFO 29276 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T10:02:47.358+02:00  INFO 29276 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.562 seconds (process running for 4.016)
+2025-07-10T10:05:42.274+02:00  INFO 29276 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:05:42.280+02:00  INFO 29276 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:05:42.295+02:00  INFO 29276 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:05:42.296+02:00  INFO 29276 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:05:42.298+02:00  INFO 29276 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T10:05:45.185+02:00  INFO 30692 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 30692 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T10:05:45.187+02:00 DEBUG 30692 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T10:05:45.188+02:00  INFO 30692 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T10:05:45.925+02:00  INFO 30692 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:05:45.927+02:00  INFO 30692 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T10:05:45.944+02:00  INFO 30692 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-07-10T10:05:45.957+02:00  INFO 30692 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:05:45.958+02:00  INFO 30692 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T10:05:45.966+02:00  INFO 30692 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T10:05:46.547+02:00  INFO 30692 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T10:05:46.559+02:00  INFO 30692 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T10:05:46.559+02:00  INFO 30692 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T10:05:46.603+02:00  INFO 30692 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T10:05:46.603+02:00  INFO 30692 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1381 ms
+2025-07-10T10:05:46.731+02:00  WARN 30692 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T10:05:46.732+02:00  INFO 30692 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T10:05:46.910+02:00  INFO 30692 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T10:05:46.912+02:00  INFO 30692 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T10:05:46.944+02:00  INFO 30692 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T10:05:46.980+02:00  INFO 30692 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T10:05:47.004+02:00  INFO 30692 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T10:05:47.224+02:00  INFO 30692 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T10:05:47.279+02:00  INFO 30692 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T10:05:47.542+02:00  INFO 30692 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T10:05:47.545+02:00  INFO 30692 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:05:47.590+02:00  WARN 30692 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T10:05:47.702+02:00  WARN 30692 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 09c52331-fd82-487e-982b-d92af8a2ac1e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T10:05:47.708+02:00  INFO 30692 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T10:05:48.572+02:00  INFO 30692 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T10:05:48.671+02:00  INFO 30692 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T10:05:48.678+02:00  INFO 30692 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.96 seconds (process running for 4.42)
+2025-07-10T10:06:21.487+02:00  INFO 30692 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:06:21.492+02:00  INFO 30692 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:06:21.507+02:00  INFO 30692 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:06:21.509+02:00  INFO 30692 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:06:21.510+02:00  INFO 30692 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T10:06:24.372+02:00  INFO 14060 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 14060 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T10:06:24.374+02:00 DEBUG 14060 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T10:06:24.376+02:00  INFO 14060 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T10:06:25.032+02:00  INFO 14060 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:06:25.033+02:00  INFO 14060 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T10:06:25.050+02:00  INFO 14060 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-07-10T10:06:25.062+02:00  INFO 14060 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:06:25.063+02:00  INFO 14060 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T10:06:25.071+02:00  INFO 14060 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T10:06:25.595+02:00  INFO 14060 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T10:06:25.606+02:00  INFO 14060 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T10:06:25.606+02:00  INFO 14060 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T10:06:25.648+02:00  INFO 14060 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T10:06:25.649+02:00  INFO 14060 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
+2025-07-10T10:06:25.766+02:00  WARN 14060 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T10:06:25.767+02:00  INFO 14060 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T10:06:25.949+02:00  INFO 14060 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T10:06:25.950+02:00  INFO 14060 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T10:06:25.980+02:00  INFO 14060 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T10:06:26.018+02:00  INFO 14060 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T10:06:26.040+02:00  INFO 14060 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T10:06:26.261+02:00  INFO 14060 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T10:06:26.325+02:00  INFO 14060 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T10:06:26.603+02:00  INFO 14060 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T10:06:26.607+02:00  INFO 14060 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:06:26.649+02:00  WARN 14060 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T10:06:26.748+02:00  WARN 14060 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f6cb2a2d-7b76-432d-b5f9-2fe90ab88558
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T10:06:26.754+02:00  INFO 14060 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T10:06:27.560+02:00  INFO 14060 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T10:06:27.661+02:00  INFO 14060 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T10:06:27.668+02:00  INFO 14060 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.793 seconds (process running for 4.27)
+2025-07-10T10:06:40.671+02:00  INFO 14060 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:06:40.681+02:00  INFO 14060 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:06:40.708+02:00  INFO 14060 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:06:40.711+02:00  INFO 14060 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:06:40.713+02:00  INFO 14060 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
+2025-07-10T10:06:43.383+02:00  INFO 30152 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Starting F1ManagerApplication using Java 21.0.7 with PID 30152 (C:\Projekty\projekty_prywatne\f1-manager\build\classes\java\main started by Marek.Paluch in C:\Projekty\projekty_prywatne\f1-manager)
+2025-07-10T10:06:43.385+02:00 DEBUG 30152 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-10T10:06:43.386+02:00  INFO 30152 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : The following 1 profile is active: "dev"
+2025-07-10T10:06:43.960+02:00  INFO 30152 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:06:43.961+02:00  INFO 30152 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-10T10:06:43.978+02:00  INFO 30152 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-07-10T10:06:43.991+02:00  INFO 30152 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-10T10:06:43.992+02:00  INFO 30152 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-10T10:06:44.001+02:00  INFO 30152 --- [f1-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-07-10T10:06:44.571+02:00  INFO 30152 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2025-07-10T10:06:44.582+02:00  INFO 30152 --- [f1-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-10T10:06:44.582+02:00  INFO 30152 --- [f1-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-10T10:06:44.626+02:00  INFO 30152 --- [f1-manager] [main] o.a.c.c.C.[.[localhost].[/f1-manager]    : Initializing Spring embedded WebApplicationContext
+2025-07-10T10:06:44.626+02:00  INFO 30152 --- [f1-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1210 ms
+2025-07-10T10:06:44.747+02:00  WARN 30152 --- [f1-manager] [main] com.zaxxer.hikari.HikariConfig           : db - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-07-10T10:06:44.748+02:00  INFO 30152 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Starting...
+2025-07-10T10:06:44.927+02:00  INFO 30152 --- [f1-manager] [main] com.zaxxer.hikari.pool.HikariPool        : db - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-07-10T10:06:44.929+02:00  INFO 30152 --- [f1-manager] [main] com.zaxxer.hikari.HikariDataSource       : db - Start completed.
+2025-07-10T10:06:44.959+02:00  INFO 30152 --- [f1-manager] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-10T10:06:44.997+02:00  INFO 30152 --- [f1-manager] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-10T10:06:45.025+02:00  INFO 30152 --- [f1-manager] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-10T10:06:45.257+02:00  INFO 30152 --- [f1-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-10T10:06:45.313+02:00  INFO 30152 --- [f1-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (db)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-10T10:06:45.578+02:00  INFO 30152 --- [f1-manager] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-10T10:06:45.582+02:00  INFO 30152 --- [f1-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:06:45.624+02:00  WARN 30152 --- [f1-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-10T10:06:45.723+02:00  WARN 30152 --- [f1-manager] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 398e3995-dd17-4f5e-9398-29df73650030
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-10T10:06:45.729+02:00  INFO 30152 --- [f1-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-10T10:06:46.546+02:00  INFO 30152 --- [f1-manager] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-07-10T10:06:46.655+02:00  INFO 30152 --- [f1-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path '/f1-manager'
+2025-07-10T10:06:46.662+02:00  INFO 30152 --- [f1-manager] [main] pl.f1manager.F1ManagerApplication        : Started F1ManagerApplication in 3.75 seconds (process running for 4.208)
+2025-07-10T10:09:19.545+02:00  INFO 30152 --- [f1-manager] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-10T10:09:19.554+02:00  INFO 30152 --- [f1-manager] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-10T10:09:19.575+02:00  INFO 30152 --- [f1-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-10T10:09:19.578+02:00  INFO 30152 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown initiated...
+2025-07-10T10:09:19.580+02:00  INFO 30152 --- [f1-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : db - Shutdown completed.
