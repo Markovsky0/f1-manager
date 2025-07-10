@@ -1,0 +1,30 @@
+server:
+  port: 9080
+  servlet:
+    context-path: /f1-manager
+
+logging:
+  level:
+    pl.f1manager: DEBUG
+  file:
+    name: ${spring.application.name}.log
+    path: build/logs
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:f1manager;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    name: f1manager
+    hikari:
+      maximum-pool-size: 10
+      idle-timeout: 60
+      connection-test-query: select 1 from dual
+      read-only: true
+  sql:
+    init:
+      mode: embedded # Use embedded mode for H2 database initialization
+  h2:
+    console:
+      enabled: true

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: f1-manager
+
+
+server:
+  port: 8080
+  shutdown: graceful
