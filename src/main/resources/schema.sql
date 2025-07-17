@@ -138,8 +138,12 @@ create table f1_manager.team_facilities
     team_id serial not null,
     facility_id serial not null,
 
-    constraint pk_team_facilities primary key (team_id, facility_id)
+    constraint pk_team_facilities primary key (team_id, facility_id),
+    constraint fk_team_id foreign key (team_id) references f1_manager.teams (id) on delete cascade,
+    constraint fk_facility_id foreign key (facility_id) references f1_manager.facilities (id) on delete cascade
 );
+
+
 
 
 
