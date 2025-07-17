@@ -42,13 +42,13 @@ create table f1_manager.sponsors
     reputation       smallint    not null,
     patience         smallint    not null,
 
-    constraint check_category check ( sponsors.category in ('PLACEHOLDER')), -- todo jak będą określone kategorie sponsorów
-    constraint category_uppercase check (category = upper (category)),
+--     constraint check_category check (sponsors.category in ('PLACEHOLDER')), -- todo jak będą określone kategorie sponsorów
+    constraint category_uppercase check (category = upper(category)),
     constraint reputation_range check (reputation between 1 and 10),
     constraint patience_range check (patience between 1 and 10)
 );
 
-create table f1_manager.team_facilities
+create table f1_manager.facilities
 (
     id                    serial primary key,
     factory               smallint not null default 1,
@@ -88,6 +88,7 @@ create table f1_manager.drivers
     agility           smallint    not null, -- sprawność
     popularity        smallint    not null,
     morale            smallint    not null,
+    overall           smallint    not null,
 
     constraint status_check check (status in ('INACTIVE', 'ACTIVE', 'RETIRED')),
     constraint status_uppercase check (status = upper(status)),
@@ -103,7 +104,42 @@ create table f1_manager.drivers
     constraint morale_range check (morale between 1 and 5)
 );
 
--- create table
+create table f1_manager.teams
+(
+    id              serial primary key,
+    name            varchar(64) not null unique,
+    country         varchar(32) not null,
+    primary_color   varchar(7)  not null, -- kolory w formacie hex, np. #FF5733
+    secondary_color varchar(7)  not null, -- kolory w formacie hex, np. #FF5733
+    engine_brand    varchar(32),
+    tyre_brand      varchar(32),
+
+    constraint fk_engine_brand foreign key (engine_brand) references f1_manager.engines (brand) on delete set null,
+    constraint fk_tyre_brand foreign key (tyre_brand) references f1_manager.tyres (brand) on delete set null
+);
+
+create table f1_manager.contracts
+(
+    team_id    serial   not null,
+    driver_id  serial   not null,
+    length     smallint not null,                                              -- długość kontraktu w wyścigach
+    salary     numeric  not null,                                              -- pensja kierowcy
+    start_date timestamp without time zone not null default current_timestamp, -- data zawarcia kontraktu
+
+    constraint pk_team_drivers primary key (team_id, driver_id),
+    constraint fk_team_id foreign key (team_id) references f1_manager.teams (id) on delete cascade,
+    constraint fk_driver_id foreign key (driver_id) references f1_manager.drivers (id) on delete cascade,
+    constraint driver_id_unique unique (driver_id)
+);
+-- todo tabela contract_proposals, która będzie zawierała propozycje kontraktów dla kierowców
+
+create table f1_manager.team_facilities
+(
+    team_id serial not null,
+    facility_id serial not null,
+
+    constraint pk_team_facilities primary key (team_id, facility_id)
+);
 
 
 
