@@ -1,5 +1,4 @@
 -- schema used for h2 initialization
-
 create schema if not exists f1_manager;
 
 create table f1_manager.engines
@@ -8,7 +7,7 @@ create table f1_manager.engines
     performance smallint not null,
     reliability smallint not null,
     fuel_usage  smallint not null,
-    cost        numeric  not null,
+    price       numeric  not null,
 
     constraint performance_range check (performance between 1 and 10),
     constraint reliability_range check (reliability between 1 and 10),
@@ -22,14 +21,14 @@ create table f1_manager.tyres
     performance_wet smallint not null,
     durability      smallint not null,
     warmup_time     smallint not null,
-    optimum_temp    smallint not null, -- temperature in Celsius
-    cost            numeric  not null,
+    optimal_temp    smallint not null, -- temperature in Celsius
+    price           numeric  not null,
 
     constraint performance_dry_range check (performance_dry between 1 and 10),
     constraint performance_wet_range check (performance_wet between 1 and 10),
     constraint durability_range check (durability between 1 and 10),
     constraint warmup_time_range check (warmup_time between 1 and 10),
-    constraint optimum_temp_range check (optimum_temp between 10 and 40)
+    constraint optimal_temp_range check (optimal_temp between 10 and 40)
 );
 
 create table f1_manager.sponsors
@@ -77,7 +76,7 @@ create table f1_manager.drivers
     last_name         varchar(32) not null,
     nationality       varchar(32) not null,
     age               smallint    not null,
-    gender            varchar(1)  not null,
+    gender            varchar(16) not null,
     status            varchar(16) not null default 'INACTIVE',
     quickness         smallint    not null,
     focus             smallint    not null,
@@ -88,10 +87,11 @@ create table f1_manager.drivers
     agility           smallint    not null, -- sprawność
     popularity        smallint    not null,
     morale            smallint    not null,
-    overall           smallint    not null,
 
     constraint status_check check (status in ('INACTIVE', 'ACTIVE', 'RETIRED')),
     constraint status_uppercase check (status = upper(status)),
+    constraint gender_check check (gender in ('MALE', 'FEMALE', 'OTHER')),
+    constraint gender_uppercase check (gender = upper(gender))
     constraint age_check check (age >= 18),
     constraint quickness_range check (quickness between 1 and 100),
     constraint focus_range check (focus between 1 and 100),
@@ -135,12 +135,12 @@ create table f1_manager.contracts
 
 create table f1_manager.team_facilities
 (
-    team_id serial not null,
+    team_id     serial not null,
     facility_id serial not null,
 
     constraint pk_team_facilities primary key (team_id, facility_id),
-    constraint fk_team_id foreign key (team_id) references f1_manager.teams (id) on delete cascade,
-    constraint fk_facility_id foreign key (facility_id) references f1_manager.facilities (id) on delete cascade
+    constraint fk_tf_team_id foreign key (team_id) references f1_manager.teams (id) on delete cascade,
+    constraint fk_tf_facility_id foreign key (facility_id) references f1_manager.facilities (id) on delete cascade
 );
 
 
