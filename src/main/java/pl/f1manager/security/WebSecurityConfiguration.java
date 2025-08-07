@@ -26,8 +26,9 @@ public class WebSecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(config -> config
-                        .requestMatchers(ALLOWED_PATHS).permitAll()
-                        .anyRequest().authenticated())
+//                        .requestMatchers(ALLOWED_PATHS).permitAll()
+//                        .anyRequest().authenticated())
+                        .anyRequest().permitAll())
                 .formLogin(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers

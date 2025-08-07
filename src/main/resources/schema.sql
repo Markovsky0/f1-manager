@@ -91,7 +91,7 @@ create table f1_manager.drivers
     constraint status_check check (status in ('INACTIVE', 'ACTIVE', 'RETIRED')),
     constraint status_uppercase check (status = upper(status)),
     constraint gender_check check (gender in ('MALE', 'FEMALE', 'OTHER')),
-    constraint gender_uppercase check (gender = upper(gender))
+    constraint gender_uppercase check (gender = upper(gender)),
     constraint age_check check (age >= 18),
     constraint quickness_range check (quickness between 1 and 100),
     constraint focus_range check (focus between 1 and 100),
@@ -103,6 +103,9 @@ create table f1_manager.drivers
     constraint popularity_range check (popularity between 1 and 100),
     constraint morale_range check (morale between 1 and 5)
 );
+create index idx_drivers_id on f1_manager.drivers (id);
+create index idx_drivers_first_name on f1_manager.drivers (first_name);
+create index idx_drivers_last_name on f1_manager.drivers (last_name);
 
 create table f1_manager.teams
 (
@@ -141,6 +144,29 @@ create table f1_manager.team_facilities
     constraint pk_team_facilities primary key (team_id, facility_id),
     constraint fk_tf_team_id foreign key (team_id) references f1_manager.teams (id) on delete cascade,
     constraint fk_tf_facility_id foreign key (facility_id) references f1_manager.facilities (id) on delete cascade
+);
+
+create table f1_manager.tracks
+(
+    id               serial primary key,
+    name             varchar(64) not null unique,
+    alternative_name varchar(64),          -- alternatywna nazwa toru, np. Autodromo Jose Carlos Pace (Interlagos)
+    country          varchar(32) not null,
+    description      text,                 -- opis toru
+    length           numeric     not null, -- długość toru w kilometrach
+    laps             smallint    not null, -- liczba okrążeń w wyścigu
+    pit_lane_loss    smallint    not null, -- czas straty na przejazd przez pit lane w sekundach
+);
+
+create table f1_manager.parts
+(
+    id    varchar(16) primary key,
+    type  varchar(16) not null,             -- typ części, np. 'front wing', 'rear wing',
+    level smallint    not null default 1,   -- poziom części, np. 1-10
+    wear  numeric     not null default 0.0, -- zużycie części, np. 0-100
+
+    constraint level_range check ( level between 1 and 10 ),
+    constraint wear_range check ( wear between 0.0 and 100.0 ),
 );
 
 
