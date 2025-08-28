@@ -9,4 +9,4 @@ insert into f1_manager.tyres (brand, performance_dry, performance_wet, durabilit
 insert into f1_manager.sponsors (brand, country, category, signature_amount, amount_per_race, reputation, patience) values ('Red Bull', 'Austria', 'PLACEHOLDER', 5000000, 1000000, 10, 10);
 
 insert into f1_manager.drivers (first_name, last_name, nationality, age, gender, quickness, focus, overtaking, driving_in_wet, experience, technical_insight, agility, popularity, morale)
-values ('Robert', 'Kubica', 'Poland', 38, 'M', 90, 85, 80, 75, 95, 90, 85, 80, 4);
+values ('Robert', 'Kubica', 'Poland', 38, 'MALE', 90, 85, 80, 75, 95, 90, 85, 80, 4);

@@ -155,7 +155,7 @@ create table f1_manager.tracks
     description      text,                 -- opis toru
     length           numeric     not null, -- długość toru w kilometrach
     laps             smallint    not null, -- liczba okrążeń w wyścigu
-    pit_lane_loss    smallint    not null, -- czas straty na przejazd przez pit lane w sekundach
+    pit_lane_loss    smallint    not null -- czas straty na przejazd przez pit lane w sekundach
 );
 
 create table f1_manager.parts
@@ -166,7 +166,7 @@ create table f1_manager.parts
     wear  numeric     not null default 0.0, -- zużycie części, np. 0-100
 
     constraint level_range check ( level between 1 and 10 ),
-    constraint wear_range check ( wear between 0.0 and 100.0 ),
+    constraint wear_range check ( wear between 0.0 and 100.0 )
 );
 
 
