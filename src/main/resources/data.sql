@@ -10,3 +10,4 @@ insert into f1_manager.sponsors (brand, country, category, signature_amount, amo
 
 insert into f1_manager.drivers (first_name, last_name, nationality, age, gender, quickness, focus, overtaking, driving_in_wet, experience, technical_insight, agility, popularity, morale)
 values ('Robert', 'Kubica', 'Poland', 38, 'MALE', 90, 85, 80, 75, 95, 90, 85, 80, 4);
+
